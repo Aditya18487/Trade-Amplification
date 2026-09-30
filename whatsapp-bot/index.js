@@ -365,6 +365,20 @@ async function handleClientMessage(sock, msg, senderJid, rawText) {
     }
 }
 
+function clearSessionDir() {
+    try {
+        if (fs.existsSync(SESSION_DIR)) {
+            const files = fs.readdirSync(SESSION_DIR);
+            for (const file of files) {
+                try { fs.unlinkSync(path.join(SESSION_DIR, file)); } catch (e) {}
+            }
+            console.log('🧹 Cleaned corrupted/old session files.');
+        }
+    } catch (e) {
+        console.warn('Could not clean session directory:', e.message);
+    }
+}
+
 /**
  * Initialize and start WhatsApp Bot connection
  */
@@ -391,7 +405,11 @@ async function startWhatsAppBot() {
                 creds: state.creds,
                 keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'silent' }))
             },
-            browser: Browsers.macOS('Desktop'),
+            browser: Browsers.ubuntu('Chrome'),
+            connectTimeoutMs: 60000,
+            defaultQueryTimeoutMs: 0,
+            keepAliveIntervalMs: 25000,
+            emitOwnEvents: false,
             syncFullHistory: false,
             generateHighQualityLinkPreview: true
         });
@@ -419,9 +437,9 @@ async function startWhatsAppBot() {
                     console.log('═══════════════════════════════════════════════════════════\n');
                 } catch (codeErr) {
                     console.error('⚠️ Could not obtain pairing code automatically:', codeErr.message);
-                    console.log('Falling back to QR code display in terminal...');
+                    console.log('💡 Tip: You can also link instantly with QR Code: npm run bot:qr\n');
                 }
-            }, 4000);
+            }, 4500);
         }
 
         // Connection Lifecycle Events
@@ -435,20 +453,33 @@ async function startWhatsAppBot() {
 
             if (connection === 'close') {
                 isConnecting = false;
-                pairingCodeRequested = false;
                 const statusCode = lastDisconnect?.error?.output?.statusCode;
+                console.log(`⚠️ WhatsApp connection closed. Reason Code: ${statusCode}`);
+
+                const isRegistered = sock.authState.creds.registered;
+
+                if (!isRegistered) {
+                    // Pre-registration disconnect (408 timeout or 401 unauth)
+                    // Auto-wipe partial keys to prevent corrupted session loop
+                    clearSessionDir();
+                    pairingCodeRequested = false;
+                    console.log('🔄 Session reset for fresh pairing. Reconnecting in 6 seconds...');
+                    setTimeout(startWhatsAppBot, 6000);
+                    return;
+                }
+
+                // If already registered and disconnected, auto-reconnect
                 const shouldReconnect = statusCode !== DisconnectReason.loggedOut;
-
-                console.log(`⚠️ WhatsApp connection closed. Reason Code: ${statusCode}. Reconnecting: ${shouldReconnect}`);
-
                 if (shouldReconnect) {
                     console.log('🔄 Reconnecting in 5 seconds...');
                     setTimeout(startWhatsAppBot, 5000);
                 } else {
-                    console.log('🛑 Logged out from WhatsApp. Clear whatsapp-bot/session/ to pair a new device.');
+                    console.log('🛑 Logged out from WhatsApp. Resetting session...');
+                    clearSessionDir();
                 }
             } else if (connection === 'open') {
                 isConnecting = false;
+                pairingCodeRequested = false;
                 console.log('\n======================================================');
                 console.log('✅ [COREVIX WHATSAPP BOT ONLINE & ACTIVE]');
                 console.log(`📞 CONNECTED AS: +${TARGET_PHONE_NUMBER}`);
