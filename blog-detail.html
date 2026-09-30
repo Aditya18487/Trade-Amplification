@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title id="blog-meta-title">Article Details | Corevix Technology</title>
+    <meta name="description" id="blog-meta-desc" content="Read in-depth software engineering, architecture, and technology insights by Corevix Technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20260930b">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1618926813349317');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1618926813349317&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+    <div class="mesh-spotlight"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-row">
+            <a href="index.html" class="brand">
+                <img src="assets/corevix-logo-icon.png" alt="Corevix Technology Logo" class="brand-logo-img">
+                <span>Corevix Technology</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="technologies.html" class="nav-link">Technologies ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="technologies.html" class="dropdown-item-card">
+                            <span class="dp-icon">💻</span>
+                            <span class="dp-title">Technologies</span>
+                            <span class="dp-desc">Our full engineering tech stack</span>
+                        </a>
+                        <a href="industries-tech.html" class="dropdown-item-card">
+                            <span class="dp-icon">🏢</span>
+                            <span class="dp-title">Industries</span>
+                            <span class="dp-desc">Industry solutions & telemetry</span>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-pill btn-emerald trigger-consultation">Schedule Consultation &rarr;</a>
+                <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle mobile menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="technologies.html">Technologies</a>
+        <a href="industries-tech.html">Industries</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html" class="btn-pill btn-emerald" style="margin-top: 10px; width: 100%; justify-content: center; text-align: center; border-bottom: none;">Schedule Consultation &rarr;</a>
+    </div>
+
+    <!-- Blog Detail Main Container -->
+    <main style="padding: 40px 0 80px; position: relative;">
+        <div class="container" style="max-width: 880px;">
+            
+            <!-- Breadcrumbs -->
+            <div style="font-size: 13px; color: var(--text-slate); margin-bottom: 24px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <a href="index.html" style="color: var(--text-slate); text-decoration: none;">Home</a>
+                <span style="color: rgba(255,255,255,0.2);">/</span>
+                <a href="blog.html" style="color: var(--text-slate); text-decoration: none;">Blog</a>
+                <span style="color: rgba(255,255,255,0.2);">/</span>
+                <span id="blog-breadcrumb" style="color: var(--emerald-green); font-weight: 700;">Loading Article...</span>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="blog-loading-spinner" style="text-align: center; padding: 60px 0;">
+                <div style="font-size: 18px; color: var(--emerald-green); font-weight: 700; margin-bottom: 8px;">⏳ Loading Article...</div>
+                <p style="font-size: 14px; color: var(--text-slate);">Retrieving engineering insights from Corevix database.</p>
+            </div>
+
+            <!-- Blog Content Container (Hidden until loaded) -->
+            <article id="blog-content-box" style="display: none;">
+                
+                <!-- Article Header -->
+                <header style="margin-bottom: 28px;">
+                    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
+                        <span id="blog-category" class="section-label" style="margin: 0; padding: 4px 12px; background: rgba(16,185,129,0.15); border: 1px solid var(--border-emerald); border-radius: 20px; font-size: 11px;">ENGINEERING INSIGHT</span>
+                        <span style="font-size: 12px; color: var(--text-slate); font-weight: 600;" id="blog-date">Published Article</span>
+                        <span style="color: rgba(255,255,255,0.2);">•</span>
+                        <span style="font-size: 12px; color: var(--text-muted);" id="blog-read-time">3 min read</span>
+                    </div>
+
+                    <h1 id="blog-title" style="font-size: clamp(26px, 4vw, 40px); font-weight: 900; color: #FFF; line-height: 1.25; margin: 0 0 16px;"></h1>
+
+                    <!-- Author Byline -->
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; margin-top: 14px;">
+                        <img src="assets/corevix-logo-icon.png" alt="Author Avatar" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border-emerald); background: rgba(16,185,129,0.1);">
+                        <div>
+                            <div style="font-size: 13px; font-weight: 700; color: #FFF;">Corevix Software Engineering Team</div>
+                            <div style="font-size: 11px; color: var(--text-slate);">Enterprise Systems, Fintech & AI Architecture</div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Featured Image -->
+                <div id="blog-image-container" style="margin-bottom: 36px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 40px rgba(0,0,0,0.5); background: rgba(5,8,17,0.8);">
+                    <img id="blog-image" src="" alt="Blog Featured Image" style="width: 100%; max-height: 460px; object-fit: cover; display: block;">
+                </div>
+
+                <!-- Full Article Content -->
+                <section class="glass-card cs-detail-content-card">
+                    <div id="blog-content" style="white-space: pre-line; font-size: 16px; color: #E2E8F0; line-height: 1.85; margin-bottom: 24px;"></div>
+                </section>
+
+                <!-- Consultation CTA Banner -->
+                <section class="glass-card cs-detail-cta-card" style="text-align: center; border-color: rgba(56,189,248,0.3); background: linear-gradient(135deg, rgba(13,19,36,0.95) 0%, rgba(16,185,129,0.08) 100%);">
+                    <h3 style="font-size: 22px; font-weight: 800; color: #FFF; margin-bottom: 10px;">Have Questions on This Architecture?</h3>
+                    <p style="font-size: 14.5px; color: var(--text-slate); max-width: 600px; margin: 0 auto 24px; line-height: 1.6;">
+                        Talk with our lead software architects. We help enterprise clients architect, develop, and scale production-grade software solutions with 100% IP handover.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn-pill btn-emerald" style="padding: 12px 28px;">Discuss Your Tech Architecture &rarr;</a>
+                        <a href="blog.html" class="btn-pill btn-glass" style="padding: 12px 24px;">&larr; Back to All Articles</a>
+                    </div>
+                </section>
+
+            </article>
+
+            <!-- Error State if not found -->
+            <div id="blog-error-box" style="display: none; text-align: center; padding: 60px 20px;">
+                <div style="font-size: 48px; margin-bottom: 16px;">📰</div>
+                <h2 style="font-size: 24px; font-weight: 800; color: #FFF; margin-bottom: 10px;">Article Not Found</h2>
+                <p style="font-size: 14px; color: var(--text-slate); margin-bottom: 24px;">The requested engineering article could not be located or may have moved.</p>
+                <a href="blog.html" class="btn-pill btn-emerald">&larr; Return to Blog Directory</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-line); padding-bottom: 30px; margin-bottom: 24px; flex-wrap: wrap; gap: 20px;">
+                <div style="max-width: 340px;">
+                    <a href="index.html" class="brand" style="margin-bottom: 10px; display: inline-flex;">
+                        <img src="assets/corevix-logo-icon.png" alt="Corevix Technology Logo" class="brand-logo-img">
+                        <span>Corevix Technology</span>
+                    </a>
+                    <p style="font-size: 12px; color: var(--text-slate); line-height: 1.5;">Where Innovation Meets Technology. Enterprise software development and digital transformation partner for businesses worldwide.</p>
+                    
+                    <div style="margin-top: 14px; font-size: 12px; color: var(--text-slate); line-height: 1.8;">
+                        <div>📧 <strong>Email:</strong> <a href="mailto:info@corevixtechnology.com" style="color:var(--emerald-green);">info@corevixtechnology.com</a></div>
+                        <div>📞 <strong>Phone:</strong> <a href="tel:+919243238242" style="color:var(--emerald-green);">+91 92432 38242</a></div>
+                        <div>💬 <a href="https://wa.me/919243238242" target="_blank" style="color:#25D366; font-weight:800;">Chat on WhatsApp →</a></div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div>
+                        <h4 style="font-size: 14px; font-weight: 800; color: #FFF; margin-bottom: 14px;">Navigation</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; display: flex; flex-direction: column; gap: 8px;">
+                            <li><a href="index.html" style="color: var(--text-slate);">Home</a></li>
+                            <li><a href="services.html" style="color: var(--text-slate);">Services</a></li>
+                            <li><a href="technologies.html" style="color: var(--text-slate);">Technologies</a></li>
+                            <li><a href="case-studies.html" style="color: var(--text-slate);">Case Studies</a></li>
+                            <li><a href="about.html" style="color: var(--text-slate);">About Us</a></li>
+                            <li><a href="blog.html" style="color: var(--text-slate);">Blog</a></li>
+                            <li><a href="contact.html" style="color: var(--text-slate);">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 14px; font-weight: 800; color: #FFF; margin-bottom: 14px;">Core Capabilities</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; display: flex; flex-direction: column; gap: 8px;">
+                            <li><a href="services/fintech-services.html" style="color: var(--text-slate);">Fintech Solutions</a></li>
+                            <li><a href="services/custom-software.html" style="color: var(--text-slate);">Custom Software</a></li>
+                            <li><a href="services/web-development.html" style="color: var(--text-slate);">Web Development</a></li>
+                            <li><a href="services/mobile-development.html" style="color: var(--text-slate);">Mobile Apps</a></li>
+                            <li><a href="services/saas-development.html" style="color: var(--text-slate);">SaaS Engineering</a></li>
+                            <li><a href="services/ai-automation.html" style="color: var(--text-slate);">AI & Automation</a></li>
+                            <li><a href="services/cloud-solutions.html" style="color: var(--text-slate);">Cloud Architecture</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-muted); flex-wrap: wrap; gap: 10px;">
+                <div>&copy; 2026 Corevix Technology. All rights reserved. | 100% Source Code & IP Handover.</div>
+                <div>Enterprise Software & Digital Transformation Partner</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js?v=20260930a"></script>
+</body>
+</html>

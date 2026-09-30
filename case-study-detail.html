@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title id="page-title">Case Study Details | Corevix Technology</title>
+    <meta name="description" id="page-meta-desc" content="Detailed software case study and architectural delivery by Corevix Technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20260930b">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1618926813349317');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1618926813349317&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+    <div class="mesh-spotlight"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-row">
+            <a href="index.html" class="brand">
+                <img src="assets/corevix-logo-icon.png" alt="Corevix Technology Logo" class="brand-logo-img">
+                <span>Corevix Technology</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="technologies.html" class="nav-link">Technologies ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="technologies.html" class="dropdown-item-card">
+                            <span class="dp-icon">💻</span>
+                            <span class="dp-title">Technologies</span>
+                            <span class="dp-desc">Our full engineering tech stack</span>
+                        </a>
+                        <a href="industries-tech.html" class="dropdown-item-card">
+                            <span class="dp-icon">🏢</span>
+                            <span class="dp-title">Industries</span>
+                            <span class="dp-desc">Industry solutions & telemetry</span>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="case-studies.html" class="nav-link active">Case Studies</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-pill btn-emerald trigger-consultation">Schedule Consultation &rarr;</a>
+                <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle mobile menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="technologies.html">Technologies</a>
+        <a href="industries-tech.html">Industries</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html" class="btn-pill btn-emerald" style="margin-top: 10px; width: 100%; justify-content: center; text-align: center; border-bottom: none;">Schedule Consultation &rarr;</a>
+    </div>
+
+    <!-- Case Study Detail Main Container -->
+    <main style="padding: 40px 0 80px; position: relative;">
+        <div class="container" style="max-width: 960px;">
+            
+            <!-- Breadcrumbs -->
+            <div style="font-size: 13px; color: var(--text-slate); margin-bottom: 24px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <a href="index.html" style="color: var(--text-slate); text-decoration: none;">Home</a>
+                <span style="color: rgba(255,255,255,0.2);">/</span>
+                <a href="case-studies.html" style="color: var(--text-slate); text-decoration: none;">Case Studies</a>
+                <span style="color: rgba(255,255,255,0.2);">/</span>
+                <span id="cs-breadcrumb" style="color: var(--emerald-green); font-weight: 700;">Loading Case Study...</span>
+            </div>
+
+            <!-- Loading State Placeholder -->
+            <div id="cs-loading-spinner" style="text-align: center; padding: 60px 0;">
+                <div style="font-size: 18px; color: var(--emerald-green); font-weight: 700; margin-bottom: 8px;">⏳ Loading Case Study Architecture...</div>
+                <p style="font-size: 14px; color: var(--text-slate);">Retrieving verified delivery data from Corevix database.</p>
+            </div>
+
+            <!-- Case Study Content Container (Hidden until loaded) -->
+            <article id="cs-content-box" style="display: none;">
+                
+                <!-- Hero Header -->
+                <header style="margin-bottom: 32px;">
+                    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 14px; flex-wrap: wrap;">
+                        <span id="cs-industry-badge" class="section-label" style="margin: 0; padding: 4px 12px; background: rgba(16,185,129,0.15); border: 1px solid var(--border-emerald); border-radius: 20px; font-size: 11px;">ENTERPRISE SOFTWARE</span>
+                        <span style="font-size: 11px; color: var(--text-slate); font-weight: 600;" id="cs-date-badge">Published Case Study</span>
+                    </div>
+
+                    <div style="display: flex; gap: 18px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
+                        <img id="cs-logo" src="" alt="Project Logo" style="width: 64px; height: 64px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-emerald); background: rgba(16,185,129,0.1); flex-shrink: 0;">
+                        <div>
+                            <h1 id="cs-title" style="font-size: clamp(24px, 4vw, 38px); font-weight: 900; color: #FFF; line-height: 1.25; margin: 0;"></h1>
+                            <p id="cs-tagline" style="font-size: 16px; color: var(--emerald-green); font-weight: 600; margin-top: 6px;"></p>
+                        </div>
+                    </div>
+
+                    <!-- Impact & Delivery Highlights Grid -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px;">
+                        <div class="glass-card" style="padding: 16px 20px; border-color: var(--border-emerald);">
+                            <div style="font-size: 11px; text-transform: uppercase; color: var(--text-slate); font-weight: 700; letter-spacing: 0.5px;">Core Business Impact</div>
+                            <div id="cs-metric-highlight" style="font-size: 17px; font-weight: 800; color: var(--emerald-green); margin-top: 4px;">Verified Outcome</div>
+                        </div>
+                        <div class="glass-card" style="padding: 16px 20px; border-color: rgba(56,189,248,0.3);">
+                            <div style="font-size: 11px; text-transform: uppercase; color: var(--text-slate); font-weight: 700; letter-spacing: 0.5px;">Intellectual Property</div>
+                            <div style="font-size: 17px; font-weight: 800; color: #38BDF8; margin-top: 4px;">100% Client Code Ownership</div>
+                        </div>
+                        <div class="glass-card" style="padding: 16px 20px; border-color: rgba(255,255,255,0.1);">
+                            <div style="font-size: 11px; text-transform: uppercase; color: var(--text-slate); font-weight: 700; letter-spacing: 0.5px;">Engineering Warranty</div>
+                            <div style="font-size: 17px; font-weight: 800; color: #FFF; margin-top: 4px;">Post-Launch SLA Support</div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Visual Showcase (Screenshot) -->
+                <div id="cs-screenshot-container" style="margin-bottom: 40px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 10px 40px rgba(0,0,0,0.5); background: rgba(5,8,17,0.8);">
+                    <img id="cs-shot" src="" alt="System Interface Screenshot" style="width: 100%; max-height: 520px; object-fit: cover; display: block;">
+                </div>
+
+                <!-- Architectural Scope & Technical Overview -->
+                <section class="glass-card cs-detail-content-card">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 18px;">
+                        <span style="width: 8px; height: 8px; background: var(--emerald-green); border-radius: 50%; box-shadow: 0 0 10px var(--emerald-green);"></span>
+                        <h2 style="font-size: 20px; font-weight: 800; color: #FFF; text-transform: uppercase; letter-spacing: 0.5px; margin: 0;">Architectural Scope & Deliverables</h2>
+                    </div>
+                    <div id="cs-description" style="white-space: pre-line; font-size: 15.5px; color: #E2E8F0; line-height: 1.8; margin-bottom: 24px;"></div>
+
+                    <!-- Tech Stack Pills -->
+                    <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px;">
+                        <div style="font-size: 12px; font-weight: 800; color: var(--emerald-green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Technologies & Frameworks Deployed:</div>
+                        <div id="cs-tech-tags" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+                    </div>
+
+                    <!-- Live URL Link Box if exists -->
+                    <div id="cs-link-container" style="margin-top: 24px; display: none;">
+                        <a id="cs-live-url" href="" target="_blank" rel="noopener noreferrer" class="btn-pill btn-emerald" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;">
+                            Launch Verified Live Project ↗
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Project Consultation CTA Banner -->
+                <section class="glass-card cs-detail-cta-card" style="text-align: center; border-color: rgba(56,189,248,0.3); background: linear-gradient(135deg, rgba(13,19,36,0.95) 0%, rgba(16,185,129,0.08) 100%);">
+                    <h3 style="font-size: 22px; font-weight: 800; color: #FFF; margin-bottom: 10px;">Need a Similar Custom Software Architecture?</h3>
+                    <p style="font-size: 14.5px; color: var(--text-slate); max-width: 600px; margin: 0 auto 24px; line-height: 1.6;">
+                        Connect directly with our senior software architects. We will analyze your system requirements, propose the right technology stack, and provide an executable delivery roadmap.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn-pill btn-emerald" style="padding: 12px 28px;">Discuss Your Software Requirement &rarr;</a>
+                        <a href="case-studies.html" class="btn-pill btn-glass" style="padding: 12px 24px;">&larr; Back to All Case Studies</a>
+                    </div>
+                </section>
+
+            </article>
+
+            <!-- Error State if not found -->
+            <div id="cs-error-box" style="display: none; text-align: center; padding: 60px 20px;">
+                <div style="font-size: 48px; margin-bottom: 16px;">🔍</div>
+                <h2 style="font-size: 24px; font-weight: 800; color: #FFF; margin-bottom: 10px;">Case Study Not Found</h2>
+                <p style="font-size: 14px; color: var(--text-slate); margin-bottom: 24px;">The requested software case study could not be located or may have been updated.</p>
+                <a href="case-studies.html" class="btn-pill btn-emerald">&larr; Return to Case Studies Directory</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-line); padding-bottom: 30px; margin-bottom: 24px; flex-wrap: wrap; gap: 20px;">
+                <div style="max-width: 340px;">
+                    <a href="index.html" class="brand" style="margin-bottom: 10px; display: inline-flex;">
+                        <img src="assets/corevix-logo-icon.png" alt="Corevix Technology Logo" class="brand-logo-img">
+                        <span>Corevix Technology</span>
+                    </a>
+                    <p style="font-size: 12px; color: var(--text-slate); line-height: 1.5;">Where Innovation Meets Technology. Enterprise software development and digital transformation partner for businesses worldwide.</p>
+                    
+                    <div style="margin-top: 14px; font-size: 12px; color: var(--text-slate); line-height: 1.8;">
+                        <div>📧 <strong>Email:</strong> <a href="mailto:info@corevixtechnology.com" style="color:var(--emerald-green);">info@corevixtechnology.com</a></div>
+                        <div>📞 <strong>Phone:</strong> <a href="tel:+919243238242" style="color:var(--emerald-green);">+91 92432 38242</a></div>
+                        <div>💬 <a href="https://wa.me/919243238242" target="_blank" style="color:#25D366; font-weight:800;">Chat on WhatsApp →</a></div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div>
+                        <h4 style="font-size: 14px; font-weight: 800; color: #FFF; margin-bottom: 14px;">Navigation</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; display: flex; flex-direction: column; gap: 8px;">
+                            <li><a href="index.html" style="color: var(--text-slate);">Home</a></li>
+                            <li><a href="services.html" style="color: var(--text-slate);">Services</a></li>
+                            <li><a href="technologies.html" style="color: var(--text-slate);">Technologies</a></li>
+                            <li><a href="case-studies.html" style="color: var(--text-slate);">Case Studies</a></li>
+                            <li><a href="about.html" style="color: var(--text-slate);">About Us</a></li>
+                            <li><a href="blog.html" style="color: var(--text-slate);">Blog</a></li>
+                            <li><a href="contact.html" style="color: var(--text-slate);">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 14px; font-weight: 800; color: #FFF; margin-bottom: 14px;">Core Capabilities</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; display: flex; flex-direction: column; gap: 8px;">
+                            <li><a href="services/fintech-services.html" style="color: var(--text-slate);">Fintech Solutions</a></li>
+                            <li><a href="services/custom-software.html" style="color: var(--text-slate);">Custom Software</a></li>
+                            <li><a href="services/web-development.html" style="color: var(--text-slate);">Web Development</a></li>
+                            <li><a href="services/mobile-development.html" style="color: var(--text-slate);">Mobile Apps</a></li>
+                            <li><a href="services/saas-development.html" style="color: var(--text-slate);">SaaS Engineering</a></li>
+                            <li><a href="services/ai-automation.html" style="color: var(--text-slate);">AI & Automation</a></li>
+                            <li><a href="services/cloud-solutions.html" style="color: var(--text-slate);">Cloud Architecture</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-muted); flex-wrap: wrap; gap: 10px;">
+                <div>&copy; 2026 Corevix Technology. All rights reserved. | 100% Source Code & IP Handover.</div>
+                <div>Enterprise Software & Digital Transformation Partner</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js?v=20260930a"></script>
+</body>
+</html>

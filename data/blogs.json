@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Building Sub-12ms Ledger Reconciliation Engines",
+    "category": "Fintech Architecture",
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+    "date": "Jul 28, 2026",
+    "content": "How we architect distributed event-driven payment reconciliation systems handling 100K+ transactions per second with zero data drift.\r\n\r\nIn modern fintech ecosystems, transaction reconciliation across disparate clearinghouses, banking partners, and internal double-entry ledgers requires sub-millisecond precision. Traditional batch reconciliation overnight introduces severe counterparty and liquidity risk.\r\n\r\nOur engineering team designed an event-driven stream processing pipeline utilizing distributed messaging, coupled with an in-memory cluster for idempotency checking and state validation. By leveraging high-performance worker nodes and database partitioning, our engine verifies cryptographic checksums, matches debits and credits, and detects anomalies in under 12 milliseconds per transaction stream.\r\n\r\nKey architectural principles implemented:\r\n• Idempotent event consumer groups to eliminate duplicate processing.\r\n• High-throughput vector hashing for instant payment fingerprint verification.\r\n• Automated compensation workflows that trigger immediate alerts when balance drifts exceed tolerance.\r\n• Bank-grade audit trail compliance adhering to PCI-DSS Level 1 and SOC 2 Type II specifications."
+  },
+  {
+    "id": 2,
+    "title": "Zero-Trust Architecture for Cloud Microservices",
+    "category": "Enterprise Security",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
+    "date": "Jul 22, 2026",
+    "content": "Implementing mTLS, ephemeral token authentication, and security boundaries aligned with ISO 27001 principles across Kubernetes clusters.\r\n\r\nAs enterprise architectures migrate from monolithic boundaries to multi-region cloud clusters, traditional perimeter defense mechanisms fall short. Modern attack surfaces require an absolute zero-trust security model: never trust, always verify.\r\n\r\nIn this technical breakdown, Corevix software architects demonstrate how we configure service meshes to enforce mutual TLS (mTLS) with cryptographic workload identity attestation. Every RPC between microservices requires cryptographic mutual authentication and short-lived JWT tokens signed by centralized vault authorities.\r\n\r\nKey pillars of our zero-trust implementation:\r\n• Strict mTLS mesh encryption eliminating plain-text transit within VPCs.\r\n• Continuous policy enforcement via automated gatekeeper engines.\r\n• Ephemeral credential rotation every 15 minutes to minimize blast radiuses.\r\n• Real-time intrusion detection and kernel telemetry monitoring anomalous network egress."
+  },
+  {
+    "id": 3,
+    "title": "Enterprise RAG: Vector Search for Proprietary Docs",
+    "category": "AI & Automation",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780efad99a?w=800&auto=format&fit=crop&q=80",
+    "date": "Jul 15, 2026",
+    "content": "Leveraging LLM API pipelines and custom vector databases for bank-grade internal document intelligence and workflow automation.\r\n\r\nEnterprise generative AI deployments frequently fail when models hallucinate or lack access to proprietary, domain-specific documentation. Retrieval-Augmented Generation (RAG) solves this challenge by retrieving validated internal knowledge chunks before feeding context to LLM foundation models.\r\n\r\nWe engineered a scalable RAG pipeline utilizing hybrid dense-sparse vector indexing. Documents across PDF, Word, and internal wiki formats are parsed using intelligent semantic chunking algorithms that preserve tabular and contextual relationships.\r\n\r\nEngineering highlights of our production deployment:\r\n• Context-aware semantic chunking with dynamic overlap windows.\r\n• Cross-encoder re-ranking algorithms that prioritize the top-k most relevant excerpts before prompt assembly.\r\n• Role-based access control (RBAC) filtering built directly into the vector query payload to ensure users only retrieve information authorized for their clearance level.\r\n• Guardrail validation layers preventing prompt injection and data exfiltration."
+  }
+]

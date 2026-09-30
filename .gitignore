@@ -1,0 +1,5 @@
+.vercel
+.env*
+node_modules/
+whatsapp-bot/session/
+whatsapp-bot/auth_info/

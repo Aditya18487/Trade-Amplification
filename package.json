@@ -1,0 +1,25 @@
+{
+  "name": "corevix-technology-backend",
+  "version": "1.0.0",
+  "description": "Enterprise Backend REST API Server for Corevix Technology",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "bot": "node whatsapp-bot/index.js",
+    "bot:pairing": "node whatsapp-bot/index.js --mode=pairing",
+    "bot:qr": "node whatsapp-bot/index.js --mode=qr"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.111.0",
+    "@whiskeysockets/baileys": "^7.0.0-rc14",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^9.8.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^9.0.3",
+    "pino": "^10.3.1",
+    "qrcode-terminal": "^0.12.0"
+  }
+}

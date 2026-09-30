@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/index.js", "use": "@vercel/node" },
+    { "src": "styles.css", "use": "@vercel/static" },
+    { "src": "app.js", "use": "@vercel/static" },
+    { "src": "assets/**/*", "use": "@vercel/static" },
+    { "src": "services/*.html", "use": "@vercel/static" },
+    { "src": "*.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.js" },
+    { "src": "/styles.css", "dest": "/styles.css" },
+    { "src": "/app.js", "dest": "/app.js" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/services/(.*)", "dest": "/services/$1" },
+    { "src": "/index", "dest": "/index.html" },
+    { "src": "/services", "dest": "/services.html" },
+    { "src": "/technologies", "dest": "/technologies.html" },
+    { "src": "/industries-tech", "dest": "/industries-tech.html" },
+    { "src": "/case-studies", "dest": "/case-studies.html" },
+    { "src": "/case-study-detail", "dest": "/case-study-detail.html" },
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/blog", "dest": "/blog.html" },
+    { "src": "/blog-detail", "dest": "/blog-detail.html" },
+    { "src": "/faq", "dest": "/faq.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/admin", "dest": "/admin.html" }
+  ]
+}
